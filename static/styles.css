@@ -1,0 +1,57 @@
+body {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.jumbotron {
+    background-color: #007bff;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+#loader {
+    display: none; /* Inicia oculto */
+}
+
+.results {
+    display: none;
+    margin-top: 20px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.list-group-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.list-group-item .db-type {
+    font-weight: bold;
+}
+
+.list-group-item .credentials {
+    color: #28a745; /* Verde para credenciais encontradas */
+}
+
+.list-group-item .no-credentials {
+    color: #dc3545; /* Vermelho para nenhum resultado encontrado */
+}
+
+.list-group-item .file-path {
+    font-size: 16px;
+}

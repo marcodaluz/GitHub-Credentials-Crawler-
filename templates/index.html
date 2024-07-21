@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credentials Digger</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron mt-4">
+            <h1 class="display-4 text-center">Credentials Digger</h1>
+            <p class="lead text-center">Find Sensitive Data Exposed to the Internet</p>
+        </div>
+        <form id="repoForm" class="mt-4">
+            <div class="form-group">
+                <label for="repoUrl">GitHub Repository URL</label>
+                <input type="text" class="form-control" id="repoUrl" placeholder="Enter repository URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="scanButton">
+                <span id="scanText">Scan Repository</span>
+                <span id="scanIcon" style="display: none;">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Scanning...
+                </span>
+            </button>
+            
+        </form>
+        <div class="text-center mt-4">
+            <div class="spinner-border text-primary" role="status" id="loader">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="results mt-4">
+            <h2>Results</h2>
+            <ul class="list-group" id="resultsList"></ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
